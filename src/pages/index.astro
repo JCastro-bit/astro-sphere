@@ -6,33 +6,33 @@ import StackCard from "@components/StackCard.astro"
 import { SITE, SOCIALS } from "@consts"
 
 const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+.slice(0,3)
 
 const projects = (await getCollection("projects"))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+.slice(0,3)
 
 const stack = [
-  { 
-    text: "Astro", 
-    icon: "astro", 
-    href: "https://astro.build" 
+  {
+  text: "Astro",
+  icon: "astro",
+  href: "https://astro.build"
   },
-  { 
-    text: "Javascript", 
-    icon: "javascript", 
-    href: "https://www.javascript.com" 
+  {
+  text: "Javascript",
+  icon: "javascript",
+  href: "https://www.javascript.com"
   },
-  { 
-    text: "Typescript", 
-    icon: "typescript", 
-    href: "https://www.typescriptlang.org" 
+  {
+  text: "Typescript",
+  icon: "typescript",
+  href: "https://www.typescriptlang.org"
   },
-  { 
-    text: "Tailwind", 
-    icon: "tailwind", 
-    href: "https://tailwindcss.com" 
+  {
+  text: "Tailwind",
+  icon: "tailwind",
+  href: "https://tailwindcss.com"
   },
 ]
 ---
@@ -54,13 +54,15 @@ const stack = [
   </div>
 
   <script is:inline src="/js/bg.js"></script>
-  
+
   <!-- HERO -->
   <section class="relative h-screen w-full">
     <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
-      <div id="crescent" class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
-        <div id="planet" class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
-          <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl'/>
+      <div id="crescent"
+        class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
+        <div id="planet"
+          class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
+          <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl' />
         </div>
       </div>
     </div>
@@ -68,20 +70,22 @@ const stack = [
       <div class='relative w-full h-full flex items-center justify-center'>
         <div class='p-5 text-center'>
           <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
-            Hello, I am Mark
+            Hola, soy Javier Castro
           </p>
           <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
-            Software Engineer
+            Desarrollador Web
           </p>
           <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
-            Currently designing products for humans.
+            Apasionado por diseñar y desarrollar experiencias web únicas.
           </p>
           <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
-            <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
-              Read my blog
+            <a href='/projects'
+              class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
+              Ver mi portafolio
             </a>
-            <a href='/work' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
-              View my work
+            <a href='/contact'
+              class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              Contactarme
             </a>
           </div>
         </div>
@@ -89,20 +93,29 @@ const stack = [
     </div>
   </section>
 
+
   <div class="relative bg-white dark:bg-black">
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
 
       <!-- About Section -->
       <section class="animate">
         <article>
-          <p>I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b><i>student</i></b>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b><i>crypto enthusiast</i></b> and <b><i>sarcasm connoisseur</i></b>.</p>
-          <p>I love to both build and break things. I am motivated by challenging projects with self-guided research and dynamic problem solving. My true passion is crafting creative front end designs with unique takes on color, typography and motion.</p>
-          <p>During my career</p>
-          <p>I have built products ranging from marketing and ecommerce websites to complex enterprise apps with focus on delivering fast, elegant code along with delightful user interfaces.</p>
-          <p>Now</p>
-          <p>I currently work as a software engineer at StreamlineFS, where I do product planning, design and development.</p>
+          <p>Soy un <b><i>desarrollador web</i></b>, <b><i>diseñador de UX/UI</i></b>, <b><i>solucionador de
+                problemas</i></b>, <b><i>colaborador en equipo</i></b>, <b><i>aprendiz constante</i></b>,
+            <b><i>minimalista</i></b>, <b><i>optimista eterno</i></b> y <b><i>entusiasta de la tecnología</i></b>.</p>
+          <p>Me encanta construir y mejorar sitios web. Estoy motivado por proyectos desafiantes que requieren
+            investigación autodirigida y solución dinámica de problemas. Mi verdadera pasión es crear diseños de
+            front-end creativos con enfoques únicos en color, tipografía y animación.</p>
+          <p>A lo largo de mi carrera</p>
+          <p>he desarrollado productos que van desde sitios web de marketing y comercio electrónico hasta aplicaciones
+            empresariales complejas, con un enfoque en entregar código rápido y elegante junto con interfaces de usuario
+            atractivas.</p>
+          <p>Actualmente</p>
+          <p>trabajo como desarrollador de software en Farmacias Guadalajara, donde me dedico a la planificación, diseño
+            y desarrollo de productos.</p>
         </article>
       </section>
+
 
       <!-- Blog Preview Section -->
       <section class="animate">
@@ -111,7 +124,8 @@ const stack = [
             <p class="font-semibold text-black dark:text-white">
               Recent posts
             </p>
-            <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+            <a href="/blog"
+              class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
                 All posts
               </span>
@@ -119,9 +133,9 @@ const stack = [
           </div>
           <ul class="space-y-4">
             {posts.map((post) => (
-              <li>
-                <ArrowCard entry={post} />
-              </li>
+            <li>
+              <ArrowCard entry={post} />
+            </li>
             ))}
           </ul>
         </div>
@@ -135,16 +149,13 @@ const stack = [
           </p>
           <div class="flex flex-wrap items-center gap-2 mt-5">
             {stack.map(item => (
-              <StackCard 
-                text={item.text}
-                icon={item.icon}
-                href={item.href}
-              />
+            <StackCard text={item.text} icon={item.icon} href={item.href} />
             ))}
           </div>
           <div>
             Performing reactivity and statefulness, special guest
-            <a href="https://www.solidjs.com/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+            <a href="https://www.solidjs.com/" target="_blank"
+              class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
                 SolidJS
               </span>
@@ -160,7 +171,8 @@ const stack = [
             <p class="font-semibold text-black dark:text-white">
               Recent projects
             </p>
-            <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+            <a href="/projects"
+              class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
                 All projects
               </span>
@@ -168,9 +180,9 @@ const stack = [
           </div>
           <ul class="space-y-4">
             {projects.map((project) => (
-              <li>
-                <ArrowCard entry={project} />
-              </li>
+            <li>
+              <ArrowCard entry={project} />
+            </li>
             ))}
           </ul>
         </div>
@@ -187,20 +199,21 @@ const stack = [
           </p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {SOCIALS.map(social => (
-              <div class="col-span-1 flex items-center gap-1">
-                <span class="whitespace-nowrap truncate">
-                  {social.NAME}
+            <div class="col-span-1 flex items-center gap-1">
+              <span class="whitespace-nowrap truncate">
+                {social.NAME}
+              </span>
+            </div>
+            <div class="col-span-3 truncate">
+              <a href={social.HREF} target="_blank"
+                class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+                <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+                  {social.TEXT}
                 </span>
-              </div>
-              <div class="col-span-3 truncate">
-                <a href={social.HREF} target="_blank" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-                  <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                    {social.TEXT}
-                  </span>
-                </a>
-              </div>
+              </a>
+            </div>
             ))}
-        </div>
+          </div>
       </section>
     </div>
   </div>
